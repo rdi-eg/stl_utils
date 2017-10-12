@@ -1,11 +1,11 @@
-#include "stl_utils.h"
+#include "rdi_stl_utils.h"
 
 using namespace std;
 
 namespace RDI
 {
 
-std::vector<std::string> split(const std::string& input, const char delimiter)
+vector<string> split(const string& input, const char delimiter)
 {
 	string buff{""};
 	vector<string> output;
