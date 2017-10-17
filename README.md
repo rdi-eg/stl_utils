@@ -12,7 +12,7 @@ Takes any basic_string, most notably `string` and `wstring` and a delimeter (it'
 #### Example:
 `vector<string> words = RDI::split(sentence);`
 
-### Concatinate Vectors
+### Concatenate Vectors
 `std::vector<T> concat_vectors(std::vector<T> a, std::vector<T> b)`
 
 Takes two vectors concatinates them and returns the result.
