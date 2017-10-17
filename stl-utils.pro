@@ -10,8 +10,7 @@ TARGET = rdi_stl-utils
 TEMPLATE = lib
 CONFIG += staticlib
 
-SOURCES += \
-        stl_utils.cpp
+SOURCES +=
 
 HEADERS += \
     rdi_stl_utils.h

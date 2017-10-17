@@ -9,9 +9,39 @@ namespace RDI
 
 extern "C++"
 {
-	std::vector<std::string> split(const std::string &input, const char delimiter = ' ');
 
-	template<typename T>
+template<typename T>
+std::vector<std::basic_string<T>> split(const std::basic_string<T> &input, const char delimiter = ' ')
+{
+	std::basic_string<T> buff;
+
+	std::vector<std::basic_string<T>> output;
+
+	for(auto c : input)
+	{
+		if(c != delimiter)
+		{
+			buff += c;
+		}
+		else
+		{
+			if(c == delimiter && !buff.empty())
+			{
+				output.push_back(buff);
+				buff.clear();
+			}
+		}
+	}
+
+	if(!buff.empty())
+	{
+		output.push_back(buff);
+	}
+
+	return output;
+}
+
+template<typename T>
 	std::vector<T> concat_vectors(std::vector<T> a, std::vector<T> b)
 	{
 		a.insert(a.end(), b.begin(), b.end());
