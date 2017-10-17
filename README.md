@@ -19,7 +19,7 @@ Takes two vectors concatinates them and returns the result.
 
 #### Example:
 ```C++
-vector<int> x{1, 2, 3};
-vector<int> y{4, 5};
+vector<int> x  = {1, 2, 3};
+vector<int> y  = {4, 5};
 vector<int> xy = RDI::concat_vectors(x, y); // {1, 2, 3, 4, 5}
 ```
