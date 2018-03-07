@@ -5,13 +5,14 @@
 #include <string>
 #include <algorithm>
 #include <memory>
+#include <type_traits>
 
 /// Use this macro to create a smart pointer to an array
 #define MAKE_UNIQUE_ARRAY(TYPE, NAME, SIZE) \
 	std::unique_ptr<TYPE[]> NAME = std::make_unique<TYPE[]>((SIZE))
 
 /// Use this macro when you own an array ptr that you did not create
-/// but scence you own it, you're responsible of freeing it.
+/// but since you own it, you're responsible of freeing it.
 /// Note that the array must be created using the 'new' keyword.
 /// malloc may not produce compile error and the program may run normally
 /// but it can (and will) silently leak memory in the background
