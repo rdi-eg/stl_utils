@@ -10,11 +10,10 @@ namespace RDI
 extern "C++"
 {
 
-template<typename T>
-std::vector<std::basic_string<T>> split(const std::basic_string<T> &input, const char delimiter = ' ')
+template<typename T ,typename D>
+std::vector<std::basic_string<T>> split(const std::basic_string<T> &input, const D delimiter = ' ')
 {
 	std::basic_string<T> buff;
-
 	std::vector<std::basic_string<T>> output;
 
 	for(auto c : input)
