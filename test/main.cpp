@@ -152,6 +152,29 @@ TEST_CASE("string vector","concat_vectors test")
 		vector<string> V3_correct= {};
 		CHECK(V3==V3_correct);
 	}
-
 }
 
+TEST_CASE("within_vector")
+{
+	SECTION("Found")
+	{
+		vector<int> V= {1,2,3,4,5};
+		int key = 2;
+		bool res  = RDI::within_vector(key,V);
+		CHECK(res == true);
+	}
+	SECTION("Not found")
+	{
+		vector<int> V= {1,2,3,4,5};
+		int key = 10;
+		bool res  = RDI::within_vector(key,V);
+		CHECK(res == false);
+	}
+}
+TEST_CASE("remove_spaces")
+{
+	string str = "islam magdy saieed" ;
+	string result_correct = "islammagdysaieed";
+	string result = remove_spaces(str);
+	CHECK(result_correct == result);
+}
