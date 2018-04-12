@@ -13,7 +13,7 @@ TEST_CASE("English String","split test")
 	{
 		string input = " aaa b c  d   s_sa";
 		vector<string> correct_result = {"aaa","b","c","d","s_sa"};
-		vector<string> expected_result = split(input,' ');
+		vector<string> expected_result = split(input);
 		CHECK(correct_result==expected_result);
 	}
 	SECTION("one token")
@@ -50,7 +50,7 @@ TEST_CASE("Arabic String","split test")
 										  ,L"بينانا"
 										 };
 		wchar_t d =L' ';
-		vector<wstring> expected_result = split(input,d);
+		vector<wstring> expected_result = split(input);
 		CHECK(correct_result==expected_result);
 	}
 	SECTION("multi tokens #ح")

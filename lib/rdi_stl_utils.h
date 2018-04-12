@@ -27,8 +27,8 @@ extern "C++"
 {
 
 
-template<typename T ,typename D>
-std::vector<std::basic_string<T>> split(const std::basic_string<T> &input, const D delimiter = ' ')
+template<typename T >
+std::vector<std::basic_string<T>> split(const std::basic_string<T> &input, const T delimiter = ' ')
 {
 	std::basic_string<T> buff;
 	std::vector<std::basic_string<T>> output;
