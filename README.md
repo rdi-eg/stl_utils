@@ -1,3 +1,5 @@
+**This repo has been moved to [Gitlab](https://gitlab.com/rdi-eg/stl_utils) and is no longer maintained here.**
+
 # stl-utils
 Single header library that has some STL utility functions.
 
